@@ -1,0 +1,42 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block title %}Détail thé{% endblock %}
+
+{% block body %}
+    <h1 class="admin-title">Thé {{ tea.name }}</h1>
+    <div class="row">
+        <div class="col-md-12 mb-5 mt-5">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th class="col-md-2">Nom</th>
+                        <td class="col-md-10">{{ tea.name }}</td>
+                    </tr>
+                    <tr>
+                        <th class="col-md-2">Ingrédients</th>
+                        <td class="col-md-10">{{ tea.ingredients }}</td>
+                    </tr>
+                    <tr>
+                        <th class="col-md-2">Particularité</th>
+                        <td class="col-md-10">{{ tea.feature }}</td>
+                    </tr>
+                    <tr>
+                      <th class="col-md-2">Produit du mois</th>
+                      <td class="col-md-10">{{ tea.highlighted ? 'Oui' : 'Non' }}</td>
+                    </tr>
+                    <tr>
+                        <th class="col-md-2">Nouveauté</th>
+                        <td class="col-md-10">{{ tea.novelty ? 'Oui' : 'Non' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="btn btn-outline-dark" href="{{ path('tea_edit', {'id': tea.id}) }}">
+                <i class="fas fa-pencil-alt"></i> Éditer</a>
+            {{ include('admin/tea/_delete_form.html.twig') }}
+        </div>
+        <div class="col-md-12 mb-5">
+            <a class="btn btn-outline-dark" href="{{ path('tea_index') }}"><i class="fas fa-reply"></i> Retour</a>
+        </div>
+    </div>
+{% endblock %}
+

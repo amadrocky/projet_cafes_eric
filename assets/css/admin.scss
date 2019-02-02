@@ -1,0 +1,13 @@
+.btn-outline-dark{
+  color: $secondary;
+  border-color: $secondary;
+}
+
+.btn-outline-dark:hover{
+  color: $primary;
+  background-color: $secondary;
+  border-color: $secondary;
+}
+.admin-title{
+  font-size: 3em;
+}

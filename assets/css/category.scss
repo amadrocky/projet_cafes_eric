@@ -1,0 +1,243 @@
+.intro-coffee {
+  position: relative;
+  @media (min-width: 992px) {
+    .intro-img {
+      width: 90%;
+      height: 90%;
+      float: left;
+    }
+    .intro-text {
+      left: 700px;
+      width: 100%;
+      position: absolute;
+
+      .intro-button {
+        width: 100%;
+        left: 0;
+        position: absolute;
+        bottom: -2rem;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .intro-text {
+      width: 55%;
+    }
+  }
+}
+
+
+.section-heading-coffee {
+  text-transform: uppercase;
+
+  .section-heading-upper-coffee {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  .section-heading-lower-coffee {
+    display: block;
+    padding-top: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+    font-style: oblique;
+  }
+}
+
+.intro-tea {
+  position: relative;
+  @media (min-width: 992px) {
+    .intro-img {
+      width: 88%;
+      float: left;
+    }
+    .intro-text {
+      left: 600px;
+      width: 100%;
+      position: absolute;
+
+      .intro-button {
+        width: 100%;
+        left: 0;
+        position: absolute;
+        bottom: -2rem;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .intro-text {
+      width: 55%;
+    }
+  }
+}
+
+
+.section-heading-tea {
+  text-transform: uppercase;
+
+  .section-heading-upper-tea {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  .section-heading-lower-tea {
+    display: block;
+    padding-top: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+    font-style: oblique;
+  }
+}
+
+.colorli {
+
+  li {
+    &::before {
+      color: $touch;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+
+    }
+  }
+}
+
+.starli {
+  list-style-type: "\A4\ ";
+
+  li::before {
+    color: $touch;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+}
+
+hr {
+  width: 250px;
+  border: 1px $touch solid;
+}
+
+.oblic {
+  font-style: oblique;
+}
+
+.country {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.area {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-top: 20px;
+  font-family: Lora;
+}
+
+.about-heading-content-coffee {
+  @media (min-width: 992px) {
+    position: center;
+    margin-left: 15rem;
+    max-width: 50%;
+  }
+}
+
+.coffee {
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.tastingNote {
+  font-style: oblique;
+}
+
+.imgMedium {
+  max-width: 800px;
+  max-height: 800px;
+}
+
+@media (max-width: 991px) {
+  .imgMedium {
+    max-width: 100%;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.ctb {
+  background-color: fade-out($primary, 0.1);
+
+  .ctb-inner {
+    position: relative;
+    margin: 0.5rem;
+    background-color: fade-out($white, 0.15);
+    padding-bottom: 20px;
+
+    &:before {
+      border-radius: 0.5rem;
+      content: '';
+      position: absolute;
+      top: -0.5rem;
+      bottom: -0.5rem;
+      left: -0.5rem;
+      right: -0.5rem;
+      border: 0.25rem solid fade-out($white, 0.15);
+    }
+  }
+}
+
+.linkCoffee {
+  a {
+    color: $black;
+    &:hover {
+      color: $touch;
+      text-decoration: none;
+    }
+  }
+}
+
+.card-img-top {
+  height: 313px;
+}
+
+.intro-infusion {
+  position: relative;
+  @media (min-width: 992px) {
+    .intro-img {
+      width: 100%;
+    }
+    .intro-text {
+      left: 600px;
+      width: 100%;
+      position: absolute;
+    }
+  }
+  @media (min-width: 1200px) {
+    .intro-text {
+      width: 55%;
+    }
+  }
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.ct-tea {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: transparent;
+  .bg-faded {
+    box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.75);
+    min-height: 200px;
+  }
+}
+
+.linkCoffee a {
+  text-align: center;
+}

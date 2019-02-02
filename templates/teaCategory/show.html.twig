@@ -1,0 +1,36 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Thés{% endblock %}
+
+{% block body %}
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="about-heading-content">
+            <h1 class="titles">
+                <span class="section-heading-lower text-uppercase font-weight-bold justify-content-center d-flex ">{{ category.title }}</span>
+            </h1>
+        </div>
+    </div>
+</section>
+<section class="page-section cta">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            {% for familyTea, teas in teaByFamilyTea %}
+                <div class="cta-inner text-center rounded mt-5">
+                    <h2>
+                        <span class="section-heading-upper mt-4">{{ familyTea }}</span>
+                    </h2>
+                    {% for tea in teas %}
+                        <p class="text-left ml-5 "><span class="oblic font-weight-bold">{{ tea.name }}</span> : {{ tea.ingredients }}</p>
+                        {% if tea.feature is not empty %}
+                            <p class="showCat text-left ml-5 small mb-4">Note : {{ tea.feature }}</p>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
